@@ -321,9 +321,8 @@ footer .socials a {
 }
 
 footer .socials a :hover,
-footer .links a:hover,
-footer .credit a:hover {
-  color: var(--bg);
+footer .links a:hover {
+  color: var(--primary);
 }
 
 footer .links {
@@ -342,6 +341,10 @@ footer .credit {
 footer .credit a {
   color: var(--primary);
   font-weight: 700;
+}
+
+footer .credit a:hover {
+  color: var(--bg);
 }
 /* Media Queries */
 
