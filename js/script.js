@@ -25,13 +25,13 @@ function autoSlide() {
   counter += 1;
   slidefun(counter);
 }
-function plusSlides(n) {
-  counter += n;
+function plusSlides(e) {
+  counter += e;
   slidefun(counter);
   resetTimer();
 }
-function currentSlide(n) {
-  counter = n;
+function currentSlide(e) {
+  counter = e;
   slidefun(counter);
   resetTimer();
 }
@@ -40,7 +40,7 @@ function resetTimer() {
   timer = setInterval(autoSlide, 3000);
 }
 
-function slidefun(n) {
+function slidefun(e) {
   let i;
   for (i = 0; i < myslide.length; i++) {
     myslide[i].style.display = 'none';
@@ -48,10 +48,10 @@ function slidefun(n) {
   for (i = 0; i < dot.length; i++) {
     dot[i].className = dot[i].className.replace(' active', '');
   }
-  if (n > myslide.length) {
+  if (e > myslide.length) {
     counter = 1;
   }
-  if (n < 1) {
+  if (e < 1) {
     counter = myslide.length;
   }
   myslide[counter - 1].style.display = 'block';
